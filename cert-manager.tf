@@ -11,5 +11,5 @@ resource "helm_release" "cert-manager" {
   repository = var.helm-chart-repo
   version    = var.helm-chart-version
 
-  values = var.helm-custom-values ? [file("${var.helm-custom-values-path}")] : []
+  values = var.helm-custom-values ? [file(var.helm-custom-values-path)] : []
 }
