@@ -4,6 +4,12 @@ variable "kubeconfig-path" {
   default     = "~/.kube/config"
 }
 
+variable "kube-context" {
+  description = "Kubernetes Context to Use"
+  type        = string
+  default     = ""
+}
+
 variable "cert-manager-namespace" {
   description = "Cert Manager Namespace"
   type        = string
